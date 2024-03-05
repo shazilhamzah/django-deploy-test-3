@@ -1,0 +1,416 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>DevBook - Bootstrap 5 Book/eBook Landing Page Template For Developers</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="{% static "landing/assets/fontawesome/js/all.min.js" %}"></script>
+
+    <!-- Theme CSS -->  
+	
+    <link id="theme-style" rel="stylesheet" href="{% static "/landing/assets/css/theme.css" %}">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head> 
+
+<body>    
+    <header class="header">	    
+        <div class="branding">
+            <div class="container-fluid position-relative py-3">
+                <div class="logo-wrapper">
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="{% static "landing/assets/images/my-logo.png" %}" alt="logo" style="width: 5%;"><span class="logo-text">AlifBaaTa</span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	        
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <section class="hero-section">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
+					<div class="promo pe-md-3 pe-lg-5">
+						<h1 class="headline mb-3">
+							Learn Arabic Through Engaging Flashcards
+						</h1><!--//headline-->
+						<div class="subheadline mb-4">
+							Discover the beauty of Arabic language and culture with our interactive flashcards.
+
+						</div><!--//subheading-->
+
+						<div class="cta-holder row gx-md-3 gy-3 gy-md-0">
+							<div class="col-12 col-md-auto">
+								<a class="btn btn-primary w-100" href="{% url "register" %}">Get Started</a>
+							</div>
+							<div class="col-12 col-md-auto">
+								<a class="btn btn-secondary w-100" href="#benefits-section" >Learn More</a>
+							</div>
+						</div><!--//cta-holder-->
+
+
+						<div class="hero-quotes mt-5">
+							<div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5" data-bs-ride="carousel" data-bs-interval="8000">
+								<div class="carousel-indicators">
+									<button type="button" data-bs-target="#quotes-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+									<button type="button" data-bs-target="#quotes-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+									<button type="button" data-bs-target="#quotes-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+								</div>
+
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<blockquote class="quote p-4 theme-bg-light">
+											Fantastic flashcards improved my Arabic. Easy to use with diverse vocabulary. Highly recommend for fun, effective learning!
+										</blockquote><!--//item-->
+										<div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+											<div class="col-12 col-md-auto text-center text-md-start">
+												<img class="source-profile" src="{% static "landing/assets/images/profiles/profile-my-1.jpeg" %}" alt="image" style="border-radius: 60px;">
+											</div><!--//col-->
+											<div class="col source-info text-center text-md-start">
+												<div class="source-name">ليلى محمد</div>
+												<div class="soure-title">Beirut, Lebanon</div>
+											</div><!--//col-->
+										</div><!--//source-->
+									</div><!--//carousel-item-->
+									<div class="carousel-item">
+										<blockquote class="quote p-4 theme-bg-light">
+											"Using this site for weeks, pleased with results. Helpful flashcards speed Arabic learning. Interface needs slight improvement for navigation."
+										</blockquote><!--//item-->
+										<div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+											<div class="col-12 col-md-auto text-center text-md-start align-items-center">
+												<img class="source-profile" src="{% static "landing/assets/images/profiles/profile-my-2.jpeg" %}" alt="image" style="border-radius: 60px;">
+											</div><!--//col-->
+											<div class="col source-info text-center text-md-start">
+												<div class="source-name">محمد علي</div>
+												<div class="soure-title">Cairo, Egypt</div>
+											</div><!--//col-->
+										</div><!--//source-->
+									</div><!--//carousel-item-->
+									<div class="carousel-item">
+										<blockquote class="quote p-4 theme-bg-light">
+											"Best for Arabic learning with diverse flashcards. Comprehensive coverage, fun learning. Grateful for inspiring language development!"										</blockquote><!--//item-->
+										<div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+											<div class="col-12 col-md-auto text-center text-md-start">
+												<img class="source-profile" src="{% static "landing/assets/images/profiles/profile-3.png" %}" alt="image">
+											</div><!--//col-->
+											<div class="col source-info text-center text-md-start">
+												<div class="source-name">يوسف عبدالله</div>
+												<div class="soure-title">Riyadh, Saudi Arabia</div>
+											</div><!--//col-->
+										</div><!--//source-->
+									</div><!--//carousel-item-->
+								</div><!--//carousel-inner-->
+							</div><!--//quotes-carousel-->
+
+						</div><!--//hero-quotes-->
+					</div><!--//promo-->
+			    </div><!--col-->
+			    <div class="col-12 col-md-5 mb-5 align-self-center">
+				    <div class="book-cover-holder">
+					    <img class="img-fluid book-cover" src="{% static "landing/assets/images/arabic-book.png" %}"  style="border-radius: 0px;margin-bottom:20px;">
+					    <div class="book-badge d-inline-block shadow">
+						    Testing<br>Version
+					    </div>
+				    </div><!--//book-cover-holder-->
+				    <div class="text-center"><a class="theme-link scrollto" href="#reviews-section">See all website reviews</a></div>
+			    </div><!--col-->
+		    </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//hero-section-->
+    
+    <section id="benefits-section" class="benefits-section theme-bg-light-gradient py-5">
+	    <div class="container py-5">
+			<h2 class="section-heading text-center mb-3">What Will You Gain From Our Arabic Website?</h2>
+			<div class="section-intro single-col-max mx-auto text-center mb-5">Master Arabic effortlessly with our interactive web app. Flashcards, audio lessons, and cultural insights await. Start your journey today! </div>
+		    <div class="row text-center">
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+						<div class="item-icon">
+							<i class="fa-solid fa-book fa-lg" style="color: #ee6524;padding-bottom: 9px;"></i>						
+						</div>
+					    <div class="item-header" >
+							<h3 class="item-heading">Master Arabic Grammar through Engaging Flashcards</h3>
+						</div><!--//item-heading-->
+					    <div class="item-desc">
+						    Flashcards provide an effective way to learn any Arabic grammar, vocabulary, conversation, and slang.
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fa-solid fa-spell-check fa-lg" style="color: #ee6524;padding-bottom: 10px;"></i></i></div>
+						    <h3 class="item-heading">Expand your Arabic vocabulary and grammar</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    Unlock a World of Language Mastery with Our Comprehensive Learning Resources
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fa-regular fa-comment fa-lg" style="color: #ee6524;padding-bottom: 10px;"></i></div>
+						    <h3 class="item-heading">Discover arabic slangs in a fun and comprehensive way</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    Our flashcards cover a wide range of Arabic slang terms to help you speak like a native.	
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    
+		    </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//benefits-section-->
+    
+    <section id="content-section" class="content-section">
+	    <div class="container">
+		    <div class="single-col-max mx-auto">
+		    <h2 class="section-heading text-center mb-5">What's Included</h2>
+			    <div class="row">
+				    <div class="col-12 col-md-6">
+					    <div class="figure-holder mb-5">
+						    <img class="img-fluid" src="{% static "landing/assets/images/kid-with-bg.jpeg" %}" alt="image" >
+					    </div><!--//figure-holder-->
+				    </div><!--//col-->
+				    <div class="col-12 col-md-6 mb-5">
+					    <div class="key-points mb-4 text-center">
+						    <ul class="key-points-list list-unstyled mb-4 mx-auto d-inline-block text-start">
+							    <li><i class="fas fa-check-circle me-2"></i>Comprehensive Arabic Vocabulary</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Interactive Flashcards</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Engaging Audio Lessons</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Grammar Exercises and Explainers</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Cultural Insights and Etiquette</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Personalized Learning Pathways</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Progress Tracking and Assessment</li>
+						    </ul>
+						    <div class="text-center"><a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/">Get Started</a></div>
+					    </div><!--//key-points-->
+					    
+				    </div><!--//col-12-->   
+			    </div><!--//row-->
+		    </div><!--//single-col-max-->
+	    </div><!--//container-->
+    </section><!--//content-section-->
+    
+    <section id="audience-section" class="audience-section py-5">
+	    <div class="container">
+		    <h2 class="section-heading text-center mb-4">Who This App Is For</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">
+			    This app is designed for various types of learners, including:
+		    </div><!--//section-intro-->
+		    <div class="audience mx-auto">
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">Children</h4>
+					    <div class="item-desc">Start your journey to bilingualism early and build a strong foundation in Arabic.</div>
+				    </div><!--//col-->
+			    </div><!--//item-->			    
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">Adults</h4>
+					    <div class="item-desc">Master Arabic to enhance your career opportunities and personal growth.</div>
+				    </div><!--//col-->
+			    </div><!--//item-->			    
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">Buisness Professionals</h4>
+					    <div class="item-desc">Communicate effectively in Arabic to expand your global business network.</div>
+				    </div><!--//col-->
+			    </div><!--//item-->
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">Travel Enthusiasts</h4>
+					    <div class="item-desc"> Immerse yourself in Arabic culture and connect with locals during your travels.</div>
+				    </div><!--//col-->
+			    </div><!--//item-->
+		    </div><!--//audience-->
+	    </div><!--//container-->
+    </section><!--//audience-section-->
+    
+    <section id="form-section" class="form-section">
+	    <div class="container">
+		    <div class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5">
+			    <h2 class="form-heading text-center">Want some more info?</h2>
+			    <div class="form-intro text-center mb-3">Sign up to get more details of the app. <br>You can follow our newsletter to become more updated.</div>
+			    <div class="form-wrapper mx-auto">					
+					<form class="signup-form row g-2 align-items-center">
+	                    <div class="col-12 col-lg-9">
+	                        <label class="sr-only" for="semail">Email</label>
+	                        <input type="email" id="semail" name="sub_email" class="form-control me-md-1 semail" placeholder="Your email">
+	                    </div>
+	                    <div class="col-12 col-lg-3">
+	                        <button type="submit" class="btn btn-primary btn-submit w-100">Send</button>
+	                    </div>
+	                </form><!--//signup-form-->
+			    </div><!--//form-wrapper-->
+		    </div><!--//lead-form-wrapper-->
+	    </div><!--//container-->
+    </section><!--//form-section-->
+    
+    <section id="reviews-section" class="reviews-section py-5">
+	    <div class="container">
+		    <h2 class="section-heading text-center">Website Reviews</h2>
+		    <div class="section-intro text-center single-col-max mx-auto mb-5">See what our users are saying. </div>
+		    <div class="row justify-content-center">
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    
+					    <blockquote class="quote">
+					        Fantastic flashcards improved my Arabic. Easy to use with diverse vocabulary. Highly recommend for fun, effective learning!     
+				        </blockquote><!--//item-->
+				        <div class="source row gx-md-3 gy-3 gy-md-0">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="{% static "landing/assets/images/profiles/profile-my-1.jpeg" %}" alt="image" style="border-radius: 60px;">
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">ليلى محمد</div>
+						        <div class="soure-title">Beirut, Lebanon</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				        <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+							"Using this site for weeks, pleased with results. Helpful flashcards speed Arabic learning. Interface needs slight improvement for navigation."
+				        </blockquote><!--//item-->				        
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="{% static "landing/assets/images/profiles/profile-my-2.jpeg" %}" alt="image" style="border-radius: 60px;">
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">محمد علي</div>
+						        <div class="soure-title">Cairo, Egypt</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				        
+				         <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+							"Best for Arabic learning with diverse flashcards. Comprehensive coverage, fun learning. Grateful for inspiring language development!"
+				        </blockquote><!--//item-->
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="{% static "landing/assets/images/profiles/profile-3.png" %}" alt="image" >
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">يوسف عبدالله</div>
+						        <div class="soure-title">Riyadh, Saudi Arabia</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				         <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+							"Game-changer for Arabic learning. Flashcards accelerate progress. Interface user-friendly but minor navigation improvements needed."
+				        </blockquote><!--//item-->
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="{% static "landing/assets/images/profiles/profile-female-2.jpeg" %}" alt="image" style="border-radius: 60px;" >
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">فاطمة أحمد</div>
+						        <div class="soure-title">Lahore, Pakistan</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				        <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+							"Flashcards aid Arabic learning. Interface cluttered, navigation cumbersome. Potential for improvement in design for seamless experience."
+				        </blockquote><!--//item-->
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="{% static "landing/assets/images/profiles/profile-female-1.jpeg" %}" alt="image" style="border-radius: 60px;" >
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">عائشة حسن</div>
+						        <div class="soure-title">Doha, Qatar</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				        <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+		    </div><!--//row-->
+		    <div class="text-center">
+		        <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/">Start Today</a>
+		    </div>
+	    </div><!--//container-->
+    </section><!--//reviews-section-->
+    
+    <!-- <section id="author-section" class="author-section section theme-bg-primary py-5"> -->
+	    <!-- <div class="container py-3"> -->
+		    <!-- <div class="author-profile text-center mb-5"> -->
+			    <!-- <img class="author-pic" src="assets/images/profiles/author-profile.png" alt="image" > -->
+		    <!-- </div>//author-profile -->
+		    <!-- <h2 class="section-heading text-center text-white mb-3">About The Author</h2> -->
+		    <!-- <div class="author-bio single-col-max mx-auto"> -->
+			    <!-- <p>This book landing page template is made by product designer <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers. You can use this template to self-publish and promote your book/ebook. You can easily use platforms such as <a class="theme-link" href="https://gumroad.com/" target="_blank">Gumroad</a> to handle your book payment and delivery.</p> -->
+			    <!-- <p> This template is 100% FREE as long as you <strong>keep the footer attribution link</strong>. You do not have the rights to resell, sublicense or redistribute (even for free) the template on its own or as a separate attachment from any of your work. If you’d like to use this template without the footer attribution link, you can buy the <a class="theme-link" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/" target="_blank"><strong>commercial license</strong></a>.</p> -->
+			    <!-- <div class="author-links text-center pt-4"> -->
+	<!-- /		        <h5 class="text-white mb-4">Follow Author</h5> -->
+				    <!-- <ul class="social-list list-unstyled"> -->
+					    <!-- <li class="list-inline-item"><a href="https://twitter.com/3rdwave_themes"><i class="fab fa-twitter"></i></a></li> -->
+					    <!-- <li class="list-inline-item"><a href="https://github.com/xriley"><i class="fab fa-github-alt"></i></a></li>  -->
+			            <!-- <li class="list-inline-item"><a href="https://medium.com/@3rdwave_themes"><i class="fab fa-medium-m"></i></a></li> -->
+			            <!--  -->
+			            <!-- <li class="list-inline-item"><a href="https://themes.3rdwavemedia.com/"><i class="fas fa-globe-europe"></i></a></li> -->
+			        <!-- </ul>//social-list -->
+			    <!-- </div>//author-links -->
+			    
+		    <!-- </div>//author-bio -->
+		    
+	    <!-- </div>//container -->
+    <!-- </section>//author-section -->
+    
+    
+
+    <footer class="footer">
+
+	    <div class="footer-bottom text-center py-5">
+
+	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Template designed by <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> <a class="theme-link" href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a></small>
+ 
+	    </div>
+	    
+    </footer>
+       
+    <!-- Javascript -->          
+    <script src="{% static "landing/assets/plugins/popper.min.js" %}"></script>
+    <script src="{% static "landing/assets/plugins/bootstrap/js/bootstrap.min.js" %}"></script> 
+    <script src="{% static "landing/assets/plugins/smoothscroll.min.js" %}"></script> 
+	<script src="{% static "landing/https://unpkg.com/aos@next/dist/aos.js" %}"></script>
+	<script>
+		AOS.init();
+	</script>
+    
+    <script src="{% static "landing/assets/js/main.js" %}"></script>
+
+</body>
+</html> 
+
