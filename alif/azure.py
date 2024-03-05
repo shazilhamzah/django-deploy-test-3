@@ -1,10 +1,11 @@
 import os
 from .settings import *
 from .settings import BASE_DIR
+
+SECRET_KEY = ['SECRET']
 ALLOWED_HOSTS=[os.environ['https://arabic-test1webapp.azurewebsites.net/']]
 CSRF_TRUSTED_ORIGINS = ['https://arabic-test1webapp.azurewebsites.net/']
 DEBUG = False
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
