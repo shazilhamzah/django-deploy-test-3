@@ -20,7 +20,7 @@
 
     <!-- Theme CSS -->  
 	
-    <link id="theme-style" rel="stylesheet" href="{% static "/landing/assets/css/theme.css" %}">
+    <link id="theme-style" rel="stylesheet" href="{% static "landing/assets/css/theme.css" %}">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head> 
@@ -195,7 +195,7 @@
 							    <li><i class="fas fa-check-circle me-2"></i>Personalized Learning Pathways</li>
 							    <li><i class="fas fa-check-circle me-2"></i>Progress Tracking and Assessment</li>
 						    </ul>
-						    <div class="text-center"><a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/">Get Started</a></div>
+						    <div class="text-center"><a class="btn btn-primary" href="{% url "register" %}">Get Started</a></div>
 					    </div><!--//key-points-->
 					    
 				    </div><!--//col-12-->   
@@ -357,7 +357,7 @@
 			    </div><!--//item-->
 		    </div><!--//row-->
 		    <div class="text-center">
-		        <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/">Start Today</a>
+		        <a class="btn btn-primary" href="{% url "register" %}">Start Today</a>
 		    </div>
 	    </div><!--//container-->
     </section><!--//reviews-section-->

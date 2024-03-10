@@ -24,9 +24,10 @@ SECRET_KEY = 'django-insecure-ji2*#653+#to4pfn8d-5p6+c^%2_8c-v0#7h-_bos_qv8k4!6l
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+import os
+ALLOWED_HOSTS = ['arabic-test1webapp.azurewebsites.net']
 
-ALLOWED_HOSTS = ["arabic-test1webapp.azurewebsites.net",'127.0.0.1']
-
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 # Application definition
 
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -120,14 +122,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATIC_ROOT = BASE_DIR / 'static' 
+
+
+# FOR LOCAL DEPLOYMENT UNCOMMENT THIS
+
+# STATIC_ROOT = "var/www/static/"
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 
