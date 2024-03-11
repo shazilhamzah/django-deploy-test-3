@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ji2*#653+#to4pfn8d-5p6+c^%2_8c-v0#7h-_bos_qv8k4!6l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 CSRF_TRUSTED_ORIGINS = ['https://test-deploy12386.azurewebsites.net']
 import os
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'arabic-test1webapp.azurewebsites.net','*']
